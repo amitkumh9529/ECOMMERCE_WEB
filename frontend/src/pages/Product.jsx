@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { ShopContext } from '../context/ShopContext';
 import { assets } from '../assets/assets';
+import RelatedProducts from '../components/RelatedProducts';
 
 const Product = () => {
 
@@ -93,6 +94,23 @@ const Product = () => {
         </div>
 
       </div>
+      {/* ----------Description&Review section---------- */}
+
+      <div className='mt-20'>
+        <div className='flex'>
+          <b className='border px-5 py-3 text-sm'>Description</b>
+          <p className='border px-5 pt-3 text-sm'>Reviews (122)</p>
+
+        </div>
+        <div className='flex flex-col gap-4 border px-6 py-6 text-sm text-gray-500'>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore numquam illo, unde illum quo sunt ea cupiditate aliquid, est voluptatum atque magnam. Quam quisquam accusamus sapiente voluptatum! Sit, dicta ab. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque minima culpa aut aliquam asperiores dolorum? Perferendis nemo vitae odit voluptatem ipsum! Ex dicta natus amet, quo sequi praesentium facilis consequatur. Veniam reiciendis aspernatur beatae voluptates quo, error unde quis inventore placeat ratione tempora alias voluptatibus facere sequi corporis obcaecati cumque, dignissimos ipsam ad velit? Praesentium molestias asperiores quae dignissimos veniam.</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus dolor laborum totam sequi officiis quaerat, repudiandae enim deleniti, facilis dolore nostrum nemo hic ex, quod aliquam. Quidem veritatis eveniet unde.Veniam reiciendis aspernatur beatae voluptates quo, error unde quis inventore placeat ratione tempora alias voluptatibus facere sequi corporis obcaecati cumque, dignissimos ipsam ad velit? Praesentium molestias asperiores quae dignissimos veniam.</p>
+        </div>
+      </div>
+
+      {/* ----------Display related products---------- */}
+
+      <RelatedProducts category={productData.category} subCategory={productData.subCategory} />
       
     </div>
   ) : <div className='opacity-0'></div>
